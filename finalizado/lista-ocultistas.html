@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.ninho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="script.js"></script>
+     <!-- Barra de navegação (Nav Bar) -->
+     <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="contratos-realizados.html">Contratos Realizados</a></li>
+            <li><a href="lista-ocultistas.html">Contratar Ocultistas</a></li>
+        </ul>
+    </nav>
+    <div id="modal-contato" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn" onclick="fecharModal()">&times;</span>
+            <h2>Informações de Contato</h2>
+            <div id="modal-info"></div>
+        </div>
+    </div>
+    <header>
+        <h1>Contratar um Ocultista</h1>
+    </header>
+    <section>
+        <div class="container" id="lista-ocultistas">
+            <div class="card">
+                <h2>Mortalia</h2>
+                <p>Combatente experiente, especializada em aniquilação de monstros de diversas origens, desde a empresas e conglemorados e gangues e até mesmo exercítos.</p>
+                <button class="btn" aria-label="Contratar Mortalia" onclick="abrirModal('mortalia')">Contratar</button>
+            </div>
+            <div class="card">
+                <h2>Corvo</h2>
+                <p>Mestre em ocultismo e suas propriedades, melhor pessoa para a resolução de mistérios e invocações paranormais.</p>
+                <button class="btn" aria-label="Contratar Corvo" onclick="abrirModal('corvo')">Contratar</button>
+            </div>
+            <div class="card">
+                <h2>Urutau</h2>
+                <p>Especialista em infiltração e assassinato, perfeito para roubos e eliminação de pessoas.</p>
+                <button class="btn" aria-label="Contratar Urutau" onclick="abrirModal('urutau')">Contratar</button>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

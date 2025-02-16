@@ -1,0 +1,198 @@
+.modal {
+    display: none; /* Inicialmente o modal está oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    z-index: 9999; /* Para garantir que o modal apareça por cima de outros elementos */
+    justify-content: center;
+    align-items: center;
+}
+.fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.modal-content {
+    background-color: #1b1b1b;
+    margin: 15% auto;
+    /* Centraliza o modal na tela */
+    padding: 20px;
+    border-radius: 12px;
+    width: 80%;
+    /* Largura do modal */
+    color: white;
+    text-align: center;
+}
+
+/* Botão de Fechar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Botão de Fechar ao passar o mouse */
+.close-btn:hover {
+    color: red; /* Muda a cor quando passa o mouse em cima */
+}
+.navbar {
+    background-color: #1C1C1C;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    padding: 14px 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 14px 20px;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #D35400;
+}
+
+body {
+    background-color: #1d1d1d;
+    /* Fundo bem escuro */
+    color: #B0B0B0;
+    /* Texto claro para contraste */
+    font-family: 'Courier New', monospace;
+    /* Fonte para dar um toque mais "tech" e denso */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1A1A1A;
+    padding: 20px;
+    font-size: 36px;
+    color: #9B59B6;
+    /* Roxo escuro para o header */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h1,
+h2 {
+    color: #E74C3C;
+    /* Vermelho escuro, para dar um ar mais "perigoso" e sombrio */
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #CCCCCC;
+    /* Texto claro e levemente esmaecido */
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    /* Garante que os cards se ajustem em várias linhas se necessário */
+}
+
+#lista-ocultistas {
+    background-color: #1C1C1C;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.7);
+    /* Sombras mais intensas */
+}
+
+.card {
+    background-color: #1C1C1C;
+    border: 2px solid #7F8C8D;
+    padding: 25px;
+    border-radius: 12px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.9);
+    /* Sombra intensa para card */
+}
+
+.card img {
+    width: 100%;
+    /* Garante que a largura da imagem ocupe o 100% da largura do card */
+    height: 200px;
+    /* Definindo uma altura fixa para todas as imagens */
+    object-fit: cover;
+    /* Faz a imagem se ajustar ao tamanho sem distorcer, cortando o excesso, se necessário */
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.btn {
+    background-color: #D35400;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background-color: #C0392B;
+    transform: scale(1.05);
+    /* Efeito de "zoom" no hover */
+}
+
+#contratos-realizados {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px;
+    background-color: #1C1C1C;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.8);
+    /* Sombras pesadas para a seção de contratos */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 85%;
+    }
+}
