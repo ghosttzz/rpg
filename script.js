@@ -36,12 +36,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     links.forEach(link => {
         link.addEventListener("click", function (e) {
-            e.preventDefault();
+            e.preventDefault(); // Evita navegação imediata
+
+            // Adiciona a animação de fade-out no body
             document.body.classList.add("fade-out");
 
+            // Espera o tempo da animação de saída (500ms) antes de navegar
             setTimeout(() => {
                 window.location.href = this.href;
-            }, 500); // Espera a animação antes de ir para a nova página
+            }, 500); 
         });
+    });
+
+    // Quando a nova página for carregada, aplica a animação de fade-in
+    window.addEventListener('load', () => {
+        const content = document.querySelector('.content');
+        if (content) {
+            content.classList.add("fade-in");
+            
+            // Adiciona a animação de entrada gradual aos elementos internos
+            const elements = content.querySelectorAll('.fade-in-element');
+            elements.forEach((element, index) => {
+                element.style.animationDelay = `${index * 0.3}s`; // Escalonar animações
+                element.classList.add('fade-in-element');
+            });
+        }
     });
 });

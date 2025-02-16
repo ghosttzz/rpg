@@ -9,7 +9,18 @@
     z-index: 9999; /* Para garantir que o modal apareça por cima de outros elementos */
     justify-content: center;
     align-items: center;
+    animation: fadeElement 0.5s forwards;
 }
+/* Animação para elementos surgirem gradualmente */
+@keyframes fadeElement {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .fade-out {
     opacity: 0;
     transform: translateY(10px);
@@ -86,6 +97,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    
 }
 
 header {
@@ -104,7 +116,6 @@ h2 {
     /* Vermelho escuro, para dar um ar mais "perigoso" e sombrio */
     letter-spacing: 1px;
 }
-
 p {
     font-size: 18px;
     line-height: 1.6;
@@ -121,7 +132,31 @@ p {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+    
     /* Garante que os cards se ajustem em várias linhas se necessário */
+}
+.fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animação de fade-in para o conteúdo da página */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Animação gradual de entrada */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #lista-ocultistas {
