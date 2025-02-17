@@ -4,16 +4,20 @@ function abrirModal(ocultista) {
     let infoContato = '';
     switch (ocultista) {
         case 'mortalia':
-            infoContato = `<p><strong>Contato:</strong> mortalia@ocultismo.com</p>
-                               <p><strong>Telefone:</strong> (11) 98765-4321</p>`;
+            infoContato = `<p><strong>Contato:</strong> mortalia@torbox3uiot6wchz.onion</p>
+                               <p><strong>Telefone:</strong> (99) 98765-4321</p>`;
             break;
         case 'corvo':
-            infoContato = `<p><strong>Contato:</strong> corvo@ocultismo.com</p>
-                               <p><strong>Telefone:</strong> (11) 98876-5432</p>`;
+            infoContato = `<p><strong>Contato:</strong> corvo@eludeinwjq5p6f.onion</p>
+                               <p><strong>Telefone:</strong> (99) 98876-5432</p>`;
             break;
         case 'urutau':
-            infoContato = `<p><strong>Contato:</strong> urutau@ocultismo.com</p>
-                               <p><strong>Telefone:</strong> (11) 98987-6543</p>`;
+            infoContato = `<p><strong>Contato:</strong> urutau@sinbox4dkw6e5.onion</p>
+                               <p><strong>Telefone:</strong> (99) 98987-6543</p>`;
+            break;
+        case 'Calau-Oriental':
+            infoContato = `<p><strong>Contato:</strong> calau-Oriental@deepmx7zv3onion.onion</p>
+                                <p><strong>Telefone:</strong> (99) 32874-8436</p>`;
             break;
         default:
             infoContato = `<p>Informações não disponíveis.</p>`;
